@@ -3,7 +3,6 @@ package eu.codeacademy;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Scanner;
-
 public class Biudzetas {
 
     static ArrayList<Irasas> list = new ArrayList<Irasas>();
@@ -13,8 +12,6 @@ public class Biudzetas {
     String irasas = "";
 
     Biudzetas() {
-
-
     }
 
     public void gautiVisusIrasus() {
@@ -95,7 +92,7 @@ public class Biudzetas {
                     islaiduKategorija = IslaiduKategorija.KURAS;
                     break;
                 default:
-                    System.out.println("nera tokio pasirinkimo");
+                    System.out.println("Netinkamas pasirinkimas");
                     break;
 
             }
@@ -103,17 +100,17 @@ public class Biudzetas {
             tikrintiFloat();
             float suma = sc.nextFloat();
             LocalDateTime data = LocalDateTime.now();
-            System.out.println("pasirinkite tipa:");
+            System.out.println("Iveskite 'true' jeigu tai pavedimas, 'false' jeigu gryni:");
 
             tikrintiBoolean();
             boolean bankas = sc.nextBoolean();
-            System.out.println("info:");
+            System.out.println("Informacija apie išlaidas:");
             sc.nextLine();
             while (!sc.hasNextLine()) {
                 sc.next();
             }
             String info = sc.nextLine();
-            System.out.println("tipas:");
+            System.out.println("Iveskite 'true' jeigu tai asmeninės išlaidos, 'false' jeigu darbo:");
             while (!sc.hasNext()) {
                 sc.next();
             }
@@ -146,16 +143,16 @@ public class Biudzetas {
             tikrintiFloat();
             float suma = sc.nextFloat();
             LocalDateTime data = LocalDateTime.now();
-            System.out.println("pasirinkite tipa:");
+            System.out.println("Iveskite 'true' jeigu tai pavedimas, 'false' jeigu kitoks pinigu gavimo būdas:");
             tikrintiBoolean();
             boolean bankas = sc.nextBoolean();
-            System.out.println("info:");
+            System.out.println("Informacija apie pajamas: ");
             sc.nextLine();
             while (!sc.hasNextLine()) {
                 sc.next();
             }
             String info = sc.nextLine();
-            System.out.println("Tipas:");
+            System.out.println("'True', jeigu dirbote viršvalandžius, 'False' - jei nedirbote");
             while (!sc.hasNext()) {
                 sc.next();
             }
@@ -288,7 +285,7 @@ public class Biudzetas {
                 if (pas2 == 1) {
 
                     sc.nextLine();
-                    System.out.println("Dabartine info: " + i.getInfo());
+                    System.out.println("Dabartinis info: " + i.getInfo());
                     while (!sc.hasNextLine()) {
                         sc.next();
                     }
@@ -306,9 +303,9 @@ public class Biudzetas {
                 }
                 /////////////////////
                 if (pas3 == 1) {
-                    System.out.println("Dabartine kategorija: " + ((IslaiduIrasas) i).getIslaiduKategorija());
+                    System.out.println("Dabartinis kategorija: " + ((IslaiduIrasas) i).getIslaiduKategorija());
                     System.out.println("Kategorija:");
-                    System.out.println("[1] "+ IslaiduKategorija.MAISTAS + " [1]");
+                    System.out.println("[1]- Kaistas - [1]");
                     System.out.println("[2]- Pramogos - [2]");
                     System.out.println("[3]- Butas - [3]");
                     System.out.println("[4]- Komunaliniai - [4]");
@@ -411,5 +408,4 @@ public class Biudzetas {
 
 
 }
-
 

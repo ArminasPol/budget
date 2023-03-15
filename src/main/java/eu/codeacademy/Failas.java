@@ -26,7 +26,7 @@ public class Failas extends Biudzetas {
 
     public void gautiDuomenis() {
 
-        System.out.println("Parasykite failo pavadinima is kurio gauti duomenis:");
+        System.out.println("Failo pavadinimas iš kurio norite gauti duomenis:");
         String pavadinimasF=sc.next();
 
         String line = "";
@@ -48,7 +48,7 @@ public class Failas extends Biudzetas {
                     list.add(pjI);
 
 
-                } else if (gauta[1].equals("Islaidos")) {
+                } else if (gauta[1].equals("Išlaidos")) {
                     IslaiduKategorija islaiduKategorija = IslaiduKategorija.valueOf(gauta[2]);
                     Irasas islI = new IslaiduIrasas(suma, info, bankas, countas, data, islaiduKategorija, tipas);
                     list.add(islI);
@@ -79,3 +79,4 @@ public class Failas extends Biudzetas {
     }
 
 }
+

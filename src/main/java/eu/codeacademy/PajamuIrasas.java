@@ -3,6 +3,7 @@ package eu.codeacademy;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+
 public class PajamuIrasas extends Irasas {
     PajamuKategorija pajamuKategorija;
     String tipas;
